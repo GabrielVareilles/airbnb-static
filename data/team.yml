@@ -1,0 +1,10 @@
+# team.yml
+claudie:
+  picture: claudie.jpeg
+  role: LaBière
+borat:
+  picture: borat.jpeg
+  role: LeLieu
+jeanjean:
+  picture: jeanjean.jpeg
+  role: LesFilles

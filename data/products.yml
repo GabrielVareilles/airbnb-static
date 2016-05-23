@@ -1,4 +1,16 @@
-- name: Some product
-  image: some_product.png
-- name: Other product
-  image: other_product.png
+globe:
+  picture: globe.png
+  info1: "Discover the world"
+  info2: "The earth is your new home"
+dollar:
+  picture: dollar.png
+  info1: "Pay Online"
+  info2: "No cash issues anymore"
+beer:
+  picture: beer.png
+  info1: "Meet people"
+  info2: "Discover new culture and lifestyle"
+heart:
+  picture: heart.png
+  info1: "Share and love"
+  info2: "Join a community you will love"

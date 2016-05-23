@@ -2,9 +2,87 @@
 title: Le Wagon Middleman boilerplate
 ---
 
-<div class="welcome text-center padded">
-  <h1>Welcome to Middleman</h1>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p>
+ <!-- Your banner code -->
+<div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/background.jpg');">
+  <div class="banner-content">
+    <h1>SYMPA, C'EST CHEZ TOI ?!</h1>
+    <p>Viendez à la maison c'est truffé de nanas.</p>
+    <form class="form-inline " action="#">
+      <input class="form-control input-lg" placeholder="Le jour ou tu viendez" type="text">
+      <input class="form-control input-lg" placeholder="Le jour ou tu pars" type="text">
+      <select class="form-control input-lg">
+        <option value="1">1 solo</option>
+        <option value="2">2 guests</option>
+        <option value="3">3 guests</option>
+        <option value="4">4 guests</option>
+        <option value="5">5 guests</option>
+        <option value="6">6 guests</option>
+        <option value="7">bukkake</option>
+      </select>
+      <input class="btn btn-primary btn-lg" value="Search" type="submit"></input>
+    </form>
+  </div>
 </div>
+<!-- Your features code -->
+<div class="container text-center padded">
+  <div class="row">
+    <% data.products.each do |product, infos| %>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <%= image_tag infos.picture %>
+        <h2><%= infos.info1 %></h2>
+        <p><%= infos.info2 %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
+<!-- Your cards code -->
+<div class="wrapper-grey padded">
+  <div class="container">
+    <h2 class="text-center">Your next week-end</h2>
+    <div class="row">
+      <% data.weekends.each do |city, infos| %>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+            <div class="card " style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= infos.picture%>);">
+              <div class="card-category"><%= city.capitalize %></div>
+              <div class="card-description">
+                <h2><%= infos.title %></h2>
+                <p><%= infos.description %></p>
+              </div>
+              <%= image_tag infos.avatar, class: "card-user avatar avatar-large" %>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<!-- Your newsletter code -->
+<div class="text-center padded" id="newsletter">
+  <h2>Get news from us</h2>
+  <p>Leave us your mail and get news from us</p>
+  <form class="form-inline">
+    <input placeholder="bob@gmail.com" class="form-control" type="email">
+    <input value="Subscribe" class="btn btn-primary btn-bordered btn-bordered-primary" type="submit">
+  </form>
+</div>
+<!-- Your map code -->
+<div id="map" style="width: 100%; height: 400px;">
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+  <script type="text/javascript">
+  var myLatlng = new google.maps.LatLng(48.852937,2.364178);
+  var myOptions = {
+    zoom: 16,
+    center: myLatlng,
+    scrollwheel: false,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}] // TODO: replace [] by array from https://snazzymaps.com/
+  };
+  var map = new google.maps.Map(document.getElementById('map'), myOptions);
+  var marker = new google.maps.Marker({
+    position: myLatlng,
+    map: map,
+    title: "You are here!"
+  });
+  </script>
+</div>
+<!-- Your footer code -->
+

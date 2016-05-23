@@ -1,0 +1,15 @@
+paris:
+  picture: images/card-borat.jpeg
+  avatar: borat.jpeg
+  title: "Week-end in paris"
+  description: "Charming guide to make you discover crazy crazy places!"
+anderlecht:
+  picture: images/card-claudie.jpeg
+  avatar: claudie.jpeg
+  title: "Week-end shooting"
+  description: "Improve your photo skills with Claudie!"
+blaton:
+  picture: images/card-2.jpeg
+  avatar: jeanjean.jpeg
+  title: "Week-end fiesta"
+  description: "Meet new ladies in the best belgian club!"
