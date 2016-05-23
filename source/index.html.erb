@@ -40,17 +40,20 @@ title: Le Wagon Middleman boilerplate
   <div class="container">
     <h2 class="text-center">Your next week-end</h2>
     <div class="row">
-      <% data.weekends.each do |city, infos| %>
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+      <% data.weekends.each do |owner, infos| %>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+
             <div class="card " style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= infos.picture%>);">
-              <div class="card-category"><%= city.capitalize %></div>
+              <div class="card-category"><%= infos.city.capitalize %></div>
               <div class="card-description">
-                <h2><%= infos.title %></h2>
-                <p><%= infos.description %></p>
+                <h2><%= infos.name %></h2>
+                <p><%= infos.summary %></p>
               </div>
-              <%= image_tag infos.avatar, class: "card-user avatar avatar-large" %>
+              <%= image_tag infos.owner_picture, class: "card-user avatar" %>
+              <%= link_to "#", "weekends/#{owner}.html", class: "card-link" %>
             </div>
-          </div>
+
+        </div>
       <% end %>
     </div>
   </div>

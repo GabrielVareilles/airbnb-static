@@ -1,15 +1,27 @@
-paris:
+borat:
+  owner_name: "Borat"
   picture: images/card-borat.jpeg
-  avatar: borat.jpeg
-  title: "Week-end in paris"
-  description: "Charming guide to make you discover crazy crazy places!"
-anderlecht:
+  banner: ../images/paris-banner.jpeg
+  owner_picture: borat.jpeg
+  name: "Week-end in paris"
+  summary: "Charming guide to make you discover crazy crazy places!"
+  city: "Paris, France"
+  wifi: "true"
+claudie:
+  owner_name: "Claudie Focan"
   picture: images/card-claudie.jpeg
-  avatar: claudie.jpeg
-  title: "Week-end shooting"
-  description: "Improve your photo skills with Claudie!"
-blaton:
+  banner: ../images/anderlecht-banner.jpeg
+  owner_picture: claudie.jpeg
+  name: "Week-end shooting"
+  summary: "Improve your photo skills with Claudie!"
+  city: "Anderlecht, Belgique"
+  wifi: "true"
+jeanjean:
+  owner_name: "Jeanjean"
   picture: images/card-2.jpeg
-  avatar: jeanjean.jpeg
-  title: "Week-end fiesta"
-  description: "Meet new ladies in the best belgian club!"
+  banner: ../images/blaton-banner.jpeg
+  owner_picture: jeanjean.jpeg
+  name: "Week-end fiesta"
+  summary: "Meet new ladies in the best belgian club!"
+  city: "Blaton, Belgique"
+  wifi: "true"
